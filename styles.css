@@ -1,0 +1,143 @@
+:root {
+    --color-primary-background: #2b1a36; /* Color del fondo principal */
+    --color-secondary-background: #6C757D; /* Color de fondo secundario */
+    --color-page-background: #f4f4f4; /* Color de fondo de la página */
+    --color-code-background: #e0e0e0; /* Fondo gris claro para el código */
+    --color-text-default: #333333; /* Color de texto por defecto */
+    --color-text-light: #ffffff; /* Color de texto claro */
+}
+
+html, body {
+    height: 100%; /* Asegura que el cuerpo ocupe toda la altura */
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Coloca los hijos en columnas */
+    background-color: var(--color-page-background);
+    color: var(--color-text-default);
+}
+
+header {
+    background-color: var(--color-primary-background);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    flex: 1; /* Permite que el main ocupe el espacio disponible */
+    padding: 20px;
+}
+
+#code-gallery {
+    display: flex;
+    flex-direction: column; /* Cambiado a columna para los desplegables */
+    gap: 10px; /* Espacio entre los desplegables */
+}
+
+.language-dropdown {
+    background-color: var(--color-text-light);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-button {
+    background-color: var(--color-primary-background);
+    color: var(--color-text-light);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Botón ocupa el 100% del contenedor */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+/* Agregar estilos para el dropdown */
+
+.dropdown-button:focus + .dropdown-content,
+.dropdown-content:hover {
+    display: block; /* Mostrar el contenido al hacer hover */
+}
+
+.dropdown-button:hover {
+    background-color: var(--color-secondary-background); /* Cambio de fondo al pasar el ratón */
+    color: var(--color-text-light); /* Cambio de color de texto al pasar el ratón */
+}
+
+.language-dropdown {
+    position: relative; /* Para que los elementos secundarios se posicionen respecto a este contenedor */
+    cursor: pointer; /* Cambiar el cursor para indicar que es interactivo */
+}
+
+.dropdown-content {
+    max-height: 0; /* Para controlar la altura inicial */
+    overflow: hidden; /* Evita que el contenido desborde */
+    padding: 0 10px; /* Espaciado lateral */
+    border: 1px solid #ccc; /* Borde si es necesario */
+    background-color: #f9f9f9; /* Color de fondo */
+    margin-top: 5px; /* Espacio entre el botón y el contenido */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: max-height 1s ease, padding 0.3s ease; /* Transiciones suaves para la altura */
+}
+
+/* Clase para mostrar el dropdown */
+.dropdown-content.show {
+    max-height: 30rem; /* Ajusta este valor según el contenido máximo esperado */
+    padding: 10px; /* Espacio interior cuando está visible */
+}
+
+
+.dropdown-content .code-snippet {
+    background: var(--color-page-background);
+}
+
+.description-code{
+    margin: 1.6rem 2.6rem;
+}
+
+.dropdown-content .code-snippet h2{
+    font-size: 1.6rem;
+}
+.dropdown-content .code-snippet p{
+    font-size: 1.1rem;
+}
+
+
+code {
+    display: block;
+    white-space: pre-wrap; /* Permite que el texto se ajuste */
+    background-color: var(--color-code-background); /* Fondo gris claro para el código */
+    padding: 1rem 2rem;
+    margin:2rem 4.6rem 4rem;
+    border-radius: 5px;
+    overflow-x: auto; /* Agrega scroll horizontal si es necesario */
+}
+
+footer {
+    display: flex; /* Usar flexbox para el footer */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Alinea verticalmente el contenido */
+    padding: 20px;
+    background-color: var(--color-primary-background);
+    color: var(--color-text-light);
+    width: 100%;
+    position: relative; /* Posicionamiento relativo para el logo */
+}
+
+.footer-content {
+    flex-grow: 1; /* Permite que el contenido del pie de página crezca */
+    text-align: center; /* Centra el texto */
+}
+
+.footer-logo {
+    width: 3rem; /* Establece el ancho de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-left: auto; /* Empuja la imagen a la derecha */
+    position: absolute; /* Posiciona la imagen de forma absoluta */
+    right: 6rem; /* Alinea la imagen a la derecha con un margen */
+}
+
+
+
+

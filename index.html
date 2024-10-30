@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Códigos</title>
+    <link rel="icon" type="image/png" href="Imagenes/Logo Blanco.png">
+    <link rel="stylesheet" href="styles.css"> <!-- Enlaza a tu archivo CSS -->
+</head>
+<body>
+    <header>
+        <h1>Galería de Códigos</h1>
+        <p>Aquí encontrarás algunos de los códigos que he creado. Échales un vistazo y descubre cómo funcionan.</p>
+    </header>
+    <main>
+        <section id="code-gallery">
+            <div class="language-dropdown">
+                <button class="dropdown-button">Python</button>
+                <div class="dropdown-content">
+                    <article class="code-snippet">
+                        <div class="description-code">
+                            <h2>Hola Mundo</h2>
+                            <p>Este es un clásico. Un simple programa que muestra un saludo en la pantalla. Ideal para empezar.</p>
+                        </div>
+                        <pre><code>
+                            def hello_world():
+                                print("¡Hola, mundo!")
+                        </code></pre>
+                    </article>
+                    <article class="code-snippet">
+                        <div class="description-code">
+                            <h2>Contador Simple</h2>
+                            <p>Un pequeño bucle que cuenta desde 0 hasta 4 y muestra cada número. Perfecto para entender los bucles.</p>
+                        </div>
+                        
+                        <pre><code>
+                            for i in range(5):
+                                print(i)
+                        </code></pre>
+                    </article>
+                </div>
+            </div>
+
+            <div class="language-dropdown">
+                <button class="dropdown-button">JavaScript</button>
+                <div class="dropdown-content">
+                    <article class="code-snippet">
+                        <div class="description-code">
+                            <h2>Hola Mundo</h2>
+                            <p>Este código muestra un mensaje en la consola. Un clásico en JavaScript.</p>
+                        </div>
+                        <pre><code>
+                            console.log("¡Hola, mundo!");
+                        </code></pre>
+                    </article>
+                    <article class="code-snippet">
+                        <div class="description-code">
+                            <h2>Contador Simple</h2>
+                            <p>Un bucle que cuenta del 0 al 4 y muestra cada número en la consola.</p>
+                        </div>
+                        <pre><code>
+                            for (let i = 0; i < 5; i++) {
+                                console.log(i);
+                            }
+                        </code></pre>
+                    </article>
+                </div>
+                <!-- Estructura para otro lenguaje
+                <div class="language-dropdown">
+                    <button class="dropdown-button"> Nombre Lenguaje </button> 
+                    <div class="dropdown-content">
+                        <article class="code-snippet">
+                            <div class="description-code">
+                                <h2>Titulo Programa</h2>
+                                <p>Este código muestra un mensaje en la consola. Un clásico en JavaScript.</p>
+                            </div>
+                            <pre><code>
+                                console.log("¡Hola, mundo!");
+                            </code></pre>
+                        </article>
+                    </div>
+                </div>
+                -->
+                
+            </div>
+            <!-- Puedes agregar más lenguajes y sus respectivos códigos aquí -->
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Galería de Códigos. Todos los derechos reservados.</p>
+        </div>
+        <img src="Imagenes/Logo Blanco.png" alt="Logo Personal" class="footer-logo">
+    </footer>
+    
+    <script src="script.js"></script> <!-- Enlaza a tu archivo JavaScript -->
+</body>
+</html>
